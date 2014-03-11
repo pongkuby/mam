@@ -33,6 +33,7 @@ Ext.define('Mam.view.ProblemList', {
             {
                 xtype: 'list',
                 id:'problemList',
+                emptyText:"ไม่พบปัญหา",
                 itemTpl: [
                     '<div style="font-weight:bold;">{title}</div>',
                     '<div style="margin: 5px;">{detail}</div>',

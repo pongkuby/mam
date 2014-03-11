@@ -767,6 +767,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Mam.controller.Appointment": [],
   "Mam.controller.AppointmentAlert": [],
   "Mam.controller.Booking": [],
+  "Mam.controller.ContactUs": [],
   "Mam.controller.DayList": [],
   "Mam.controller.Login": [],
   "Mam.controller.Main": [],
@@ -793,6 +794,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Mam.store.LastLogin": [],
   "Mam.store.LocalCache": [],
   "Mam.store.Login": [],
+  "Mam.store.Problems": [],
   "Mam.view.AgendaList": [],
   "Mam.view.Appointment": [],
   "Mam.view.AppointmentAlert": [],
@@ -802,9 +804,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "Mam.view.Login": [],
   "Mam.view.Main": [],
   "Mam.view.MainCalendar": [],
-  "Mam.view.MaintainProblem": [],
   "Mam.view.PhoneBooks": [],
   "Mam.view.ProblemList": [],
+  "Mam.view.ProblemMaintain": [],
   "Mam.view.SearchAppointment": [],
   "Mam.view.SearchCalendar": [],
   "Mam.view.SearchEmployee": [],
@@ -1785,6 +1787,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Mam.controller.Appointment": [],
   "Mam.controller.AppointmentAlert": [],
   "Mam.controller.Booking": [],
+  "Mam.controller.ContactUs": [],
   "Mam.controller.DayList": [],
   "Mam.controller.Login": [],
   "Mam.controller.Main": [],
@@ -1811,6 +1814,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Mam.store.LastLogin": [],
   "Mam.store.LocalCache": [],
   "Mam.store.Login": [],
+  "Mam.store.Problems": [],
   "Mam.view.AgendaList": [
     "widget.agendalist"
   ],
@@ -1838,14 +1842,14 @@ Ext.ClassManager.addNameAliasMappings({
   "Mam.view.MainCalendar": [
     "widget.maincalendar"
   ],
-  "Mam.view.MaintainProblem": [
-    "widget.maintainproblem"
-  ],
   "Mam.view.PhoneBooks": [
     "widget.phonebooks"
   ],
   "Mam.view.ProblemList": [
     "widget.problemlist"
+  ],
+  "Mam.view.ProblemMaintain": [
+    "widget.problemmaintain"
   ],
   "Mam.view.SearchAppointment": [
     "widget.searchappointment"

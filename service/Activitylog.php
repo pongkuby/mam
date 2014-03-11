@@ -274,7 +274,7 @@ class Activitylog
     {
         $results = new ArrayObject();
         $db = Database::getPDO();
-        $query = $db->prepare("select date(a.activity_time) as name,count(*) as value from activity_log a
+        $query = $db->prepare("select date(a.activity_time) as name,count(distinct emp_id) as value from activity_log a
                                 where a.activity_time between :fromDate and :toDate
                                 group by date(a.activity_time)
                                 order by date(a.activity_time);");
