@@ -1,0 +1,39 @@
+/**
+ * Created by Thammarak.
+ * Date: 1/6/2556
+ * Time: 10:41 น.
+ */
+Ext.define('Mam.view.SearchCalendar', {
+    extend: 'Ext.dataview.List',
+    xtype: 'searchcalendar',
+    requires: [
+        'Ext.dataview.List',
+        'Ext.Toolbar'
+    ],
+    config: {
+        itemId: 'searchCalendar',
+        uid: null,
+        title: 'ค้นหาปฏิทินบุคคลอื่น',
+        layout: 'fit',
+        items: [
+            {
+                xtype: 'toolbar',
+                docked: 'top',
+                itemTpl: '<div>{firstName} {lastName} - {division}</div>',
+                items: [
+                    {
+                        itemId: 'calendarSearchField',
+                        xtype: 'searchfield',
+                        placeHolder: 'ชื่อ นามสกุล หน่วยงาน.'
+                    },
+                    {
+                        itemId: 'beginSearchCalendar',
+                        xtype: 'button',
+                        iconCls: 'search',
+                        text: 'ค้นหา'
+                    }
+                ]
+            }
+        ]
+    }
+});

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>M@M</title>
+    
+    <!-- The line below must be kept intact for Sencha Command to build your application -->
+    <link rel="stylesheet" type="text/css" href="resources/css/skin1.css" media="all"/>
+    <script src="touch/sencha-touch-all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        Ext.application({
+            name: 'Ext.ux.TouchCalendarEvents',
+            launch: function(){
+                if (Ext.os.is.Android) {
+                    window.location = "https://play.google.com/store/apps/details?id=th.co.mwa.mam";
+                }
+                else if(Ext.os.is.iOS)
+                {
+                    window.location = "https://itunes.apple.com/th/app/m-m-my-appointment-on-mobile/id672979484?mt=8";
+                }
+                else{
+                    window.location = "../index.html";
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+<div id="appLoadingIndicator">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+</html>
