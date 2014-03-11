@@ -32,18 +32,18 @@ Ext.define('Mam.view.Main', {
                     hidden: true
                 },
                 {
-                    itemId: 'addButton',
-                    xtype: 'button',
-                    iconCls: 'add',
-                    text: 'นัดหมาย',
-                    align: 'right'
-                },
-                {
                     itemId: 'statOptionButton',
                     xtype: 'button',
                     iconCls: 'list',
                     align: 'right',
                     hidden: true
+                },
+                {
+                    itemId: 'addButton',
+                    xtype: 'button',
+                    iconCls: 'add',
+                    text: 'นัดหมาย',
+                    align: 'right'
                 },
                 {
                     itemId: 'menuPanel',
@@ -52,6 +52,13 @@ Ext.define('Mam.view.Main', {
                     hideOnMaskTap: true,
                     hidden: true,
                     items: [
+                        {
+                            itemId: 'addFromButton',
+                            xtype: 'button',
+                            iconCls: 'add',
+                            text: 'นัดหมาย',
+                            hidden: true
+                        },
                         {
                             itemId: 'searchCalendarButton',
                             xtype: 'button',

@@ -45,6 +45,10 @@ Ext.define('Mam.controller.SearchAppointment', {
     },
 
     launch: function () {
+        if(Ext.os.is.Phone)
+        {
+            this.getBeginSearchAppointment().setText("");
+        }
         if (Ext.Object.fromQueryString(window.location.search).currentview == null) {
             this.setCurrentView("month");
         }

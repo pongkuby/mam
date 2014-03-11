@@ -7,7 +7,8 @@ Ext.define('Mam.store.Employees', {
     extend: 'Ext.data.Store',
     requires: [
         'Mam.model.Employee',
-        'Ext.data.proxy.JsonP'
+        'Ext.data.proxy.JsonP',
+        'Mam.Util'
     ],
     config: {
         model: 'Mam.model.Employee',

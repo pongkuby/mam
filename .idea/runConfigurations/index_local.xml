@@ -1,11 +1,12 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="index-local" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" uri="http://localhost/mam/source/index.html#addproblem">
+  <configuration default="false" name="index-local" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" uri="http://localhost/mam/source/index.html">
     <mapping url="http://localhost/mam/source/app/controller/ContactUs.js" local-file="$PROJECT_DIR$/source/app/controller/ContactUs.js" />
     <mapping url="http://localhost/mam/source/app/controller/Problem.js" local-file="$PROJECT_DIR$/source/app/controller/Problem.js" />
     <mapping url="http://localhost/mam/source/app/controller/Main.js" local-file="$PROJECT_DIR$/source/app/controller/Main.js" />
     <mapping url="http://localhost/mam/source/app/controller/Booking.js" local-file="$PROJECT_DIR$/source/app/controller/Booking.js" />
     <mapping url="http://localhost/mam/source/app/view/Main.js" local-file="$PROJECT_DIR$/source/app/view/Main.js" />
     <mapping url="http://localhost/mam/source/app.js" local-file="$PROJECT_DIR$/source/app.js" />
+    <mapping url="http://localhost/mam/source/app/controller/phone/Main.js" local-file="$PROJECT_DIR$/source/app/controller/phone/Main.js" />
     <mapping url="http://localhost/mam/source/index.html" local-file="$PROJECT_DIR$/source/index.html" />
     <RunnerSettings RunnerId="JavascriptDebugRunner" />
     <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />

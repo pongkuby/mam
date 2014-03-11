@@ -6,8 +6,8 @@
 Ext.define('Mam.Util', {
         statics: {
             getServerUrl: function () {
-                return "http://localhost/mam";
-//                return "http://mam.mwa.co.th/mam";
+//                return "http://localhost/mam";
+                return "http://mam.mwa.co.th/mam";
             },
 
             /**

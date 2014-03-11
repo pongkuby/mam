@@ -16,7 +16,8 @@ Ext.define('Mam.controller.phone.Main', {
             viewDay: 'panel #viewDay',
             viewAgenda: 'panel #viewAgenda',
             viewToday: 'maincalendar #viewToday',
-            addButton: 'main #addButton',
+            addTitleButton: 'main #addButton',
+            addButton: 'panel #addFromButton',
             agendaList: 'maincalendar #agendaList',
             searchCalendarButton: 'panel #searchCalendarButton',
             searchEmployeeButton: 'panel #searchEmployeeButton',
@@ -77,7 +78,8 @@ Ext.define('Mam.controller.phone.Main', {
     },
 
     onInitialize: function (main, eOpts) {
-        this.getAddButton().setText("");
+        this.getAddTitleButton().hide();
+        this.getAddButton().show();
         this.getMenuButton().setText("");
         this.getViewButton().setText(main.getCurrentView());
         this.onMainInitialize(main, eOpts);
