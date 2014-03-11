@@ -46,4 +46,38 @@ class Problem
         $this->problemId = $db->lastInsertId();
         return $result;
     }
+
+    /** ดึงปัญหาการใช้งานทั้งหมด */
+    public static function  getAll()
+    {
+        $result = new ArrayObject();
+        $db = Database::getPDO();
+        $query = $db->prepare("select * from problem p inner join employee e on p.emp_id = e.emp_id");
+        $query->execute();
+        while ($row = $query->fetch()) {
+            $app = Problem::mapData($row);
+            $result->append($app);
+        }
+        if ($result->count() > 0) {
+            return $result->getArrayCopy();
+        } else {
+            return $result;
+        }
+    }
+
+    /**Map ข้อมูลเข้า Object*/
+    private static function mapData($data)
+    {
+        if ($data == null) {
+            return;
+        }
+        $item = new Problem();
+        $item->problemId = $data["prob_id"];
+        $item->empId = $data["emp_id"];
+        $item->fullName = $data["first_name"] + " " + $data["last_name"];
+        $item->title = $data["title"];
+        $item->detail = $data["detail"];
+        $item->lastUpdate = $data["lastupdate"];
+        $item->isFixed = $data["isfixed"];
+    }
 } 

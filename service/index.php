@@ -367,7 +367,7 @@ $app->post('/problem/create', function () use ($app) {
     }
 });
 
-/** ใช้ดึงข้อมูล Employee Stats ตามวันที่ */
+/** ใช้ดึงปัญหาการใช้งาน */
 $app->get(
     '/problems/load', function ($fromDate, $toDate) {
         $data = ActivityLog::getActivityLogByDate(MamUtil::stringToDate($fromDate), MamUtil::stringToDate($toDate));
