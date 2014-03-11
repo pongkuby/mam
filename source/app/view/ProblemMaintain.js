@@ -29,8 +29,20 @@ Ext.define('Mam.view.ProblemMaintain', {
                 ]
             },
             {
+                xtype: 'label',
+                itemId:'maintainStatus',
+                docked: 'top',
+                html: 'บันทึกปัญหาแล้ว',
+                style: {
+                    align:'center',
+                    background: '#FFFF99',
+                    border: '1px solid #333'
+                },
+                hidden:true
+            },
+            {
                 xtype: 'fieldset',
-                itemId:'problemFieldset',
+                itemId: 'problemFieldset',
                 items: [
                     {
                         xtype: 'textfield',

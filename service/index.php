@@ -368,9 +368,8 @@ $app->post('/problem/create', function () use ($app) {
 });
 
 /** ใช้ดึงปัญหาการใช้งาน */
-$app->get(
-    '/problems/load', function ($fromDate, $toDate) {
-        $data = ActivityLog::getActivityLogByDate(MamUtil::stringToDate($fromDate), MamUtil::stringToDate($toDate));
+$app->get('/problems/load', function () {
+        $data = Problem::getAll();
         if (count($data) > 0) {
             echoJSONP(array("success" => true, "data" => $data));
         } else {

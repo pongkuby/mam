@@ -74,10 +74,11 @@ class Problem
         $item = new Problem();
         $item->problemId = $data["prob_id"];
         $item->empId = $data["emp_id"];
-        $item->fullName = $data["first_name"] + " " + $data["last_name"];
+        $item->fullName = $data["first_name"] . " " . $data["last_name"];
         $item->title = $data["title"];
         $item->detail = $data["detail"];
         $item->lastUpdate = $data["lastupdate"];
         $item->isFixed = $data["isfixed"];
+        return $item;
     }
 } 

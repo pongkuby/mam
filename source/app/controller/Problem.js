@@ -12,6 +12,7 @@ Ext.define('Mam.controller.Problem', {
         'Mam.view.ContactUs',
         'Mam.Util',
         'Mam.model.Problem',
+        'Mam.store.Problems',
         'Ext.data.proxy.JsonP'
     ],
 
@@ -52,7 +53,11 @@ Ext.define('Mam.controller.Problem', {
 
     viewProblemList: function () {
         Ext.create("Mam.view.ProblemList");
-        this.getAddButton().setText("");
+        var store = Ext.create("Mam.store.Problems");
+        this.getProblemList().down("#problemList").setStore(store);
+        if (Ext.os.is.Phone) {
+            this.getAddButton().setText("");
+        }
         Ext.Viewport.add(this.getProblemList());
         Ext.Viewport.setActiveItem(this.getProblemList());
     },
@@ -119,5 +124,13 @@ Ext.define('Mam.controller.Problem', {
             }
         );
         problem.save();
+        var status = this.getMaintainProblem().down('#maintainStatus');
+        status.show();
+        var task = Ext.create('Ext.util.DelayedTask', function() {
+            status.hide();
+            Ext.Viewport.remove(this.getMaintainProblem(), true);
+            window.location.href = "#viewproblemlist";
+        },this);
+        task.delay(2000);
     }
 });
