@@ -65,6 +65,10 @@ Ext.define('Mam.controller.SearchCalendar', {
     },
 
     onInitialize: function () {
+        if(Ext.os.is.Phone)
+        {
+            this.getBeginSearchCalendar().setText("");
+        }
         var store = Ext.create('Mam.store.Employees', {
             storeId: 'searchCalendarStore',
             sorters: [

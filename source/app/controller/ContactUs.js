@@ -22,7 +22,7 @@ Ext.define('Mam.controller.ContactUs', {
             backFromContactUsButton: 'titlebar #backFromContactUsButton',
             menuButton: 'main #menuButton',
             menuPanel: '#menuPanel',
-            addButton: 'main #addButton',
+            addButton: 'panel #addButton',
             contactUs: 'contactus'
         },
 
@@ -53,7 +53,7 @@ Ext.define('Mam.controller.ContactUs', {
         Ext.create("Mam.view.ContactUs");
         if(Ext.os.is.Phone)
         {
-            this.getViewProblemButton().setText("ปัญหา");
+            this.getViewProblemButton().setText("");
         }
         Ext.Viewport.setShowAnimation("slideIn");
         Ext.Viewport.add(this.getContactUs());

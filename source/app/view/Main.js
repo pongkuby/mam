@@ -39,13 +39,6 @@ Ext.define('Mam.view.Main', {
                     hidden: true
                 },
                 {
-                    itemId: 'addButton',
-                    xtype: 'button',
-                    iconCls: 'add',
-                    text: 'นัดหมาย',
-                    align: 'right'
-                },
-                {
                     itemId: 'menuPanel',
                     xtype: 'panel',
                     modal: true,
@@ -53,11 +46,10 @@ Ext.define('Mam.view.Main', {
                     hidden: true,
                     items: [
                         {
-                            itemId: 'addFromButton',
+                            itemId: 'addButton',
                             xtype: 'button',
                             iconCls: 'add',
-                            text: 'นัดหมาย',
-                            hidden: true
+                            text: 'นัดหมาย'
                         },
                         {
                             itemId: 'searchCalendarButton',

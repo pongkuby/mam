@@ -15,7 +15,7 @@ Ext.define('Mam.controller.SearchAppointment', {
             searchAppointment: 'searchappointment',
             appointmentSearchField: 'searchappointment #appointmentSearchField',
             beginSearchAppointment: 'searchappointment #beginSearchAppointment',
-            addButton: 'main #addButton',
+            addButton: 'panel #addButton',
             main: 'main'
         },
 
@@ -45,10 +45,6 @@ Ext.define('Mam.controller.SearchAppointment', {
     },
 
     launch: function () {
-        if(Ext.os.is.Phone)
-        {
-            this.getBeginSearchAppointment().setText("");
-        }
         if (Ext.Object.fromQueryString(window.location.search).currentview == null) {
             this.setCurrentView("month");
         }
@@ -58,6 +54,10 @@ Ext.define('Mam.controller.SearchAppointment', {
     },
 
     onInitialize: function () {
+        if(Ext.os.is.Phone)
+        {
+            this.getBeginSearchAppointment().setText("");
+        }
         var store = Ext.create('Mam.store.Appointments', {
             storeId: 'searchAppointment'
         });

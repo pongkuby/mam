@@ -50,6 +50,10 @@ Ext.define('Mam.controller.SearchEmployee', {
     },
 
     onInitialize: function (list, eOpts) {
+        if(Ext.os.is.Phone)
+        {
+            this.getBeginSearchEmployee().setText("");
+        }
         this.getBeginSearchEmployee().addListener(
             {
                 tap: function () {

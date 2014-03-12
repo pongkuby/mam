@@ -33,7 +33,7 @@ Ext.define('Mam.controller.Main', {
             viewDay: 'maincalendar #viewDay',
             viewAgenda: 'maincalendar #viewAgenda',
             viewToday: 'maincalendar #viewToday',
-            addButton: 'main #addButton',
+            addButton: 'panel #addButton',
             agendaList: 'maincalendar #agendaList',
             searchCalendarButton: 'panel #searchCalendarButton',
             searchEmployeeButton: 'panel #searchEmployeeButton',

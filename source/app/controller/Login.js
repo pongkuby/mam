@@ -23,7 +23,7 @@ Ext.define('Mam.controller.Login', {
             loginFail: 'fieldset #logInFailedLabel',
             manualButton: 'login #manualButton',
             menuButton: 'main #menuButton',
-            addButton: 'main #addButton',
+            addButton: 'panel #addButton',
             main: 'main',
             loginPanel: 'login'
         },

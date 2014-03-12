@@ -15,7 +15,7 @@ Ext.define('Mam.controller.Booking', {
     config: {
         refs: {
             main: 'main',
-            addButton: 'main #addButton',
+            addButton: 'panel #addButton',
             menuButton: 'main #menuButton',
             bookingList: 'bookinglist',
             menuPanel: 'main #menuPanel'
