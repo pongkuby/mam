@@ -98,6 +98,7 @@ Ext.define('Mam.controller.Problem', {
             record: Ext.create('Mam.model.Problem')
         });
         Ext.Viewport.add(this.getMaintainProblem());
+        this.getMaintainProblem().down("#saveProblemButton").setText("");
         Ext.Viewport.setActiveItem(this.getMaintainProblem());
     },
 
@@ -123,14 +124,23 @@ Ext.define('Mam.controller.Problem', {
                 detail: formValues.detail
             }
         );
+        var result = problem.validate();
+        if (!result.isValid()) {
+            var message = "";
+            result.items.forEach(function(item) {
+                message += "- "+ item._field+" "+item._message+"<br>";
+            },this);
+            Ext.Msg.alert('กรุณาตรวจสอบข้อมูล', message, Ext.emptyFn);
+            return;
+        }
         problem.save();
         var status = this.getMaintainProblem().down('#maintainStatus');
         status.show();
-        var task = Ext.create('Ext.util.DelayedTask', function() {
+        var task = Ext.create('Ext.util.DelayedTask', function () {
             status.hide();
             Ext.Viewport.remove(this.getMaintainProblem(), true);
             window.location.href = "#viewproblemlist";
-        },this);
+        }, this);
         task.delay(2000);
     }
 });

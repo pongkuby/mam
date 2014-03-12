@@ -21,6 +21,10 @@ Ext.define('Mam.model.Problem', {
             { name: 'postDate', type: 'date' },
             { name: 'detail', type: 'string' }
         ],
+        validations: [
+            { type: 'presence',  field: 'title' },
+            { type: 'presence',  field: 'detail' }
+        ],
         proxy: {
             type: 'rest',
             api: {
