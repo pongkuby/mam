@@ -48,13 +48,17 @@ Ext.define('Mam.view.ProblemMaintain', {
                         xtype: 'textfield',
                         name: 'title',
                         itemId: 'title',
-                        label: 'ปัญหา:'
+                        label: 'ปัญหา:',
+                        required: true,
+                        clearIcon: true
                     },
                     {
                         xtype: 'textareafield',
                         name: 'detail',
                         itemId: 'detail',
                         label: 'รายละเอียด:',
+                        required: true,
+                        clearIcon: true,
                         maxRows: 4
                     },
                     {

@@ -18,7 +18,8 @@ Ext.define('Mam.profile.Phone', {
             'Mam.controller.AppointmentAlert',
             'Mam.controller.Stats',
             'Mam.controller.Problem',
-            'Mam.controller.ContactUs'
+            'Mam.controller.ContactUs',
+            'Mam.controller.Appointment'
         ],
         views:[
             'Mam.view.phone.Main',

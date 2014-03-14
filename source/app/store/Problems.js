@@ -15,7 +15,7 @@ Ext.define('Mam.store.Problems', {
         autoLoad: true,
         proxy: {
             type: 'rest',
-            url: Mam.Util.getServerUrl() + '/service/problems/load',
+            url: '/service/problems/load',
             reader: {
                 rootProperty: 'data'
             }

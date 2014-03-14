@@ -19,7 +19,8 @@ Ext.define('Mam.controller.Main', {
         'Ext.ux.Iframe',
         'Mam.Util',
         'Mam.view.AppointmentAlert',
-        'Mam.view.ContactUs'
+        'Mam.view.ContactUs',
+        'Mam.model.Problem'
     ],
 
     config: {
@@ -710,7 +711,7 @@ Ext.define('Mam.controller.Main', {
     },
 
     onContactButtonTap: function (button) {
-        Mam.Util.writeLog(this.getUid(), "View contack us.");
+        Mam.Util.writeLog(this.getUid(), "View contact us.");
         window.location.href = "#contactus";
         this.getMenuPanel().hide();
     }

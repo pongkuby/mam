@@ -7,29 +7,37 @@ Ext.define('Mam.view.Appointment', {
         'Mam.store.Employees',
         'Ext.form.*'
     ],
-    id: 'appointmentForm',
-    url: 'service/postappointment',
     config: {
         title: 'Appointment',
-        /*Add , Edit*/
         mode: 'Add',
         items: [
+            {
+                xtype: 'titlebar',
+                docked: 'top',
+                title:'ประชุมฝ่ายฝพท.',
+                items:[
+                    {
+                        xtype:'button',
+                        text:'back'
+                    }
+                ]
+            },
             {
                 xtype: 'fieldset',
                 defaults: {
                     labelWidth: '35%'
                 },
                 items: [
-                    {
-                        name: 'title',
-                        xtype: 'textfield',
-                        label: 'Title',
-                        placeHolder: 'หัวข้อการนัดหมาย',
-                        autoCapitalize: true,
-                        required: true,
-                        clearIcon: true,
-                        id: 'title'
-                    },
+                    /*{
+                     name: 'title',
+                     xtype: 'textfield',
+                     label: 'Title',
+                     placeHolder: 'หัวข้อการนัดหมาย',
+                     autoCapitalize: true,
+                     required: true,
+                     clearIcon: true,
+                     id: 'title'
+                     },*/
                     {
                         xtype: 'selectfield',
                         name: 'appType',
@@ -72,7 +80,7 @@ Ext.define('Mam.view.Appointment', {
                                 },
                                 items: [
                                     {
-                                        id:'start',
+                                        id: 'start',
                                         name: 'start',
                                         xtype: 'datepickerfield',
                                         format: 'd m Y',

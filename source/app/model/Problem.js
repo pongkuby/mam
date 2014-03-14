@@ -6,10 +6,12 @@
  */
 Ext.define('Mam.model.Problem', {
     extend: 'Ext.data.Model',
+
     requires: [
         'Mam.Util',
         'Ext.data.proxy.Rest'
     ],
+
     config: {
         identifier: 'uuid',
         idProperty: 'problemId',
@@ -22,16 +24,16 @@ Ext.define('Mam.model.Problem', {
             { name: 'detail', type: 'string' }
         ],
         validations: [
-            { type: 'presence',  field: 'title' },
-            { type: 'presence',  field: 'detail' }
+            { type: 'presence', field: 'title' },
+            { type: 'presence', field: 'detail' }
         ],
         proxy: {
             type: 'rest',
             api: {
-                create: Mam.Util.getServerUrl() + '/service/problem/create',
-                read: Mam.Util.getServerUrl() + '/service/problem/fetch',
-                update: Mam.Util.getServerUrl() + '/service/problem/update',
-                destroy: Mam.Util.getServerUrl() + '/service/problem/delete'
+                create: '/service/problem/create',
+                read: '/service/problem/fetch',
+                update: '/service/problem/update',
+                destroy: '/service/problem/delete'
             },
             reader: {
                 type: 'json',
